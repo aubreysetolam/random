@@ -6,6 +6,7 @@ func main() {
   var ind int 
   fmt.Scan(&ind)
   fmt.Print(doFib(ind))
+  fmt.Print(recursiveFib(ind))
 }
 
 func doFib(index int) int{
@@ -16,4 +17,10 @@ func doFib(index int) int{
   return right
 }
 
-//func recFib(index int)
+func recursiveFib(index int) int{
+  if index <= 2{
+    return 1
+  }else{
+    return recursiveFib(index-1) + recursiveFib(index-2)
+  }
+}
